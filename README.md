@@ -21,7 +21,7 @@ Kemudian kalian bisa memberikan nama *project* ini sesuka kalian, pada kali ini 
 Setelah itu kalian akan mendapati tampilan seperti ini, kalian dapat mencoba menjalankan *code* yang telah ada terlebih dahulu untuk memastikan bahwa semua berjalan dengan normal.
 
 <img src="/assets/homepage.png" alt="homepage"/>
-<img src="/assets/hello_world.png" alt="hello_world" width="600" height="1000"/>
+<img src="/assets/hello_world.png" alt="hello_world" width="450" height="800"/>
 
 
 ## **Project Preparation**
@@ -78,6 +78,7 @@ class GameViewController: UIViewController {
 ```
 
 Kedua, kalian perlu menghapus file **Actions.sks** dan menghapus seluruh content yang ada di **GameScene.sks** serta merubah size-nya menggunakan iPad.
+
 ![Game Scene](/assets/setup_gamescene.png)
 
 Ketiga, kalian perlu merubah isi `GameScene.swift` kalian menjadi seperti ini
@@ -100,6 +101,7 @@ class GameScene: SKScene {
 
 Pada *code* di atas, penulis memanggil *image* yang berada di *Assets* bernama *background* dan melakukan inisialisasi SKSpriteNode yang akan ditambahkan ke dalam *root node* pada halaman **GameScene**.
 Kalian akan mendapatkan tampilan sebagai berikut.
+
 ![Initialize background](/assets/first_background.png)
 
 
@@ -110,6 +112,7 @@ Pada tahap ini kalian perlu menyiapkan *assets* berupa kumpulan gambar yang akan
 <img src="/assets/create_atlas.png" alt="create_atlas"/>
 
 Setelah kalian berhasil membuat *base* dari sebuah atlas, kalian tinggal memasukkan gambar karakter yang telah disiapkan ke dalam folder atlas yang telah dibuat.
+
 <img src="/assets/created_atlas.png" alt="created_atlas"/>
 
 Selanjutnya kalian perlu menambahkan *code* berikut di dalam function sceneDidLoad pada file `GameScene.swift`
@@ -145,6 +148,7 @@ addChild(character)
 ```
 
 Voila! kalian akan mendapatkan tampilan seperti ini. Kalian telah berhasil dalam membuat sebuah *animated character* pada SpriteKit menggunakan Texture Atlases. Selanjutnya kita akan mencoba implementasi ECS dengan memanfaatkan *framework* GameplayKit!
+
 <img src="/assets/spritekit_animated_character.gif" alt="spritekit_animated_character" />
 
 ## **Entity-Component system**
