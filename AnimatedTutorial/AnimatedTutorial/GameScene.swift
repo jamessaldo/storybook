@@ -10,9 +10,15 @@ import GameplayKit
 
 class GameScene: SKScene {
     let background = SKSpriteNode(imageNamed: "background")
-    var character = SKSpriteNode()
+    var character: Character?
+
+    // Entity-component system
+    var entityManager: EntityManager!
 
     override func sceneDidLoad() {
+        // Create entity manager
+        entityManager = EntityManager(scene: self)
+
         // Add background
         background.position = CGPoint(x: 0, y: 0)
         background.size = CGSize(width: size.width, height: size.height)
@@ -20,31 +26,14 @@ class GameScene: SKScene {
         addChild(background)
 
         // Add animated character
-        var characterAtlas: SKTextureAtlas {
-            return SKTextureAtlas(named: "LionStoryAnimation")
+        character = Character(imageName: "LionStoryAnimation")
+        if let spriteComponent = character?.component(ofType: SpriteComponent.self) {
+            spriteComponent.node.position = CGPoint(x: 0, y: -80)
+            spriteComponent.node.zPosition = 10
         }
 
-        var characterTexture: SKTexture {
-            return characterAtlas.textureNamed("LionStoryAnimation")
+        if let character = character {
+            entityManager.add(character)
         }
-
-        var characterIdleTexture: [SKTexture] {
-
-            var index: [SKTexture] = []
-            let imagesName = characterAtlas.textureNames
-
-            for name in imagesName {
-                let textureNames = characterAtlas.textureNamed(name)
-                index.append(textureNames)
-            }
-            return index
-
-        }
-        character = SKSpriteNode(texture: characterTexture)
-        character.zPosition = 10
-        character.position = CGPoint(x: 0, y: -80)
-        let idleAnimation = SKAction.animate(with: characterIdleTexture, timePerFrame: 0.2)
-        character.run(SKAction.repeatForever(idleAnimation), withKey: "chracterIdleAnimation")
-        addChild(character)
     }
 }

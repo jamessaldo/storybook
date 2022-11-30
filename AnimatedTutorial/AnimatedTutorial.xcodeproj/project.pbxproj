@@ -17,6 +17,9 @@
 		E6E35A5229371E8600DA0260 /* AnimatedTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E35A5129371E8600DA0260 /* AnimatedTutorialTests.swift */; };
 		E6E35A5C29371E8600DA0260 /* AnimatedTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E35A5B29371E8600DA0260 /* AnimatedTutorialUITests.swift */; };
 		E6E35A5E29371E8600DA0260 /* AnimatedTutorialUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E35A5D29371E8600DA0260 /* AnimatedTutorialUITestsLaunchTests.swift */; };
+		E6E35A6D29375D5F00DA0260 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E35A6C29375D5F00DA0260 /* Character.swift */; };
+		E6E35A6F29375D6C00DA0260 /* SpriteComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E35A6E29375D6C00DA0260 /* SpriteComponent.swift */; };
+		E6E35A712937615900DA0260 /* EntityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E35A702937615900DA0260 /* EntityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		E6E35A5729371E8600DA0260 /* AnimatedTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimatedTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6E35A5B29371E8600DA0260 /* AnimatedTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTutorialUITests.swift; sourceTree = "<group>"; };
 		E6E35A5D29371E8600DA0260 /* AnimatedTutorialUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedTutorialUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6E35A6C29375D5F00DA0260 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		E6E35A6E29375D6C00DA0260 /* SpriteComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteComponent.swift; sourceTree = "<group>"; };
+		E6E35A702937615900DA0260 /* EntityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,8 @@
 		E6E35A3629371E8400DA0260 /* AnimatedTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E6E35A6B29375D3600DA0260 /* Components */,
+				E6E35A6A29375D2900DA0260 /* Entities */,
 				E6E35A3729371E8400DA0260 /* AppDelegate.swift */,
 				E6E35A3929371E8400DA0260 /* GameScene.sks */,
 				E6E35A3D29371E8400DA0260 /* GameScene.swift */,
@@ -126,6 +134,23 @@
 				E6E35A5D29371E8600DA0260 /* AnimatedTutorialUITestsLaunchTests.swift */,
 			);
 			path = AnimatedTutorialUITests;
+			sourceTree = "<group>";
+		};
+		E6E35A6A29375D2900DA0260 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E6E35A6C29375D5F00DA0260 /* Character.swift */,
+				E6E35A702937615900DA0260 /* EntityManager.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E6E35A6B29375D3600DA0260 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E6E35A6E29375D6C00DA0260 /* SpriteComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,8 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6E35A3E29371E8400DA0260 /* GameScene.swift in Sources */,
+				E6E35A6F29375D6C00DA0260 /* SpriteComponent.swift in Sources */,
+				E6E35A712937615900DA0260 /* EntityManager.swift in Sources */,
 				E6E35A4029371E8400DA0260 /* GameViewController.swift in Sources */,
 				E6E35A3829371E8400DA0260 /* AppDelegate.swift in Sources */,
+				E6E35A6D29375D5F00DA0260 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
