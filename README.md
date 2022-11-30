@@ -1,4 +1,4 @@
-# **How to create animated character in Swift**
+# **Animated Character in Swift**
 
 ## **Intros**
 <img src="/assets/animated_intros.gif" alt="animated_intros" />
